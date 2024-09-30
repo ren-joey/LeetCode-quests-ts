@@ -21,9 +21,12 @@ export const optimalSets = (prods: number, sets: number[][]): number[] => {
     const loopUps: number[][] = new Array(setLen).fill(0).map(() => ([]));
 
     // Find another available sets depending on the target set
-    sets.forEach((set, idx) => {
-        sets.forEach(() => {
+    sets.forEach((set, i) => {
+        const exists = [...set];
+        sets.forEach((_set, j) => {
+            _set.some((p) => {
 
+            });
         });
     });
 
