@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+import { intersection } from 'lodash';
+
 /**
  * 假設在網路上購買了一堆商品，A1,A2,A3,A4,A5,A6,A7,A10,A15,A20,A25,A30
  * 每個商品購買一個，且每個商品都是100元。
@@ -19,16 +23,63 @@
 export const optimalSets = (prods: number, sets: number[][]): number[] => {
     const setLen = sets.length;
     const loopUps: number[][] = new Array(setLen).fill(0).map(() => ([]));
+    const values: number[] = new Array(setLen).fill(0);
+    const allSets: number[] = [];
 
-    // Find another available sets depending on the target set
+    // Find other available sets depending on the target set
     sets.forEach((set, i) => {
         const exists = [...set];
-        sets.forEach((_set, j) => {
-            _set.some((p) => {
+        values[i] = set.length;
+        allSets.push(i);
 
+        sets.forEach((_set, j) => {
+            let isConflict = false;
+            _set.some((p) => {
+                if (exists.includes(p)) {
+                    isConflict = true;
+                    return true;
+                }
             });
+
+            if (!isConflict) loopUps[i].push(j);
         });
     });
 
-    return [2, 4, 6];
+    // Recursive, only search the available sets
+    const findDeep = (idx: number, available: number[], path: number[]): any[] => {
+        if (idx >= setLen) return [0, path];
+
+        path.push(idx);
+        available = intersection(loopUps[idx], available);
+        if (available.length === 0) return [values[idx], path];
+
+        let result: number = 0;
+        let resPath: number[] = [];
+        available.forEach((a) => {
+            // Only check the set index greater than target
+            if (a > idx) {
+                const [localOpt, localPath] = findDeep(a, available, [...path]);
+                if (localOpt > result) {
+                    result = localOpt;
+                    resPath = localPath;
+                }
+            }
+        });
+
+        if (result === 0) return [values[idx], path];
+        return [values[idx] + result, resPath];
+    };
+
+    // Finding the optimal results starting from different set index
+    let opt: number = 0;
+    let optPath: number[] = [];
+    allSets.forEach((setIdx) => {
+        const [setOpt, setPath] = findDeep(setIdx, allSets, []);
+        if (setOpt > opt) {
+            opt = setOpt;
+            optPath = setPath;
+        }
+    });
+
+    return optPath;
 };
