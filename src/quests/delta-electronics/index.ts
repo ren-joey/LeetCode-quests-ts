@@ -33,15 +33,17 @@ export const optimalSets = (prods: number, sets: number[][]): number[] => {
         allSets.push(i);
 
         sets.forEach((_set, j) => {
-            let isConflict = false;
-            _set.some((p) => {
-                if (exists.includes(p)) {
-                    isConflict = true;
-                    return true;
-                }
-            });
+            if (j > i) {
+                let isConflict = false;
+                _set.some((p) => {
+                    if (exists.includes(p)) {
+                        isConflict = true;
+                        return true;
+                    }
+                });
 
-            if (!isConflict) loopUps[i].push(j);
+                if (!isConflict) loopUps[i].push(j);
+            }
         });
     });
 
@@ -56,13 +58,10 @@ export const optimalSets = (prods: number, sets: number[][]): number[] => {
         let result: number = 0;
         let resPath: number[] = [];
         available.forEach((a) => {
-            // Only check the set index greater than target
-            if (a > idx) {
-                const [localOpt, localPath] = findDeep(a, available, [...path]);
-                if (localOpt > result) {
-                    result = localOpt;
-                    resPath = localPath;
-                }
+            const [localOpt, localPath] = findDeep(a, available, [...path]);
+            if (localOpt > result) {
+                result = localOpt;
+                resPath = localPath;
             }
         });
 
