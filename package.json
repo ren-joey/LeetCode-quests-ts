@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:focus": "jest test/focus/*.test.ts"
+    "test:focus": "jest test/focus/*"
   },
   "keywords": [],
   "author": "",
