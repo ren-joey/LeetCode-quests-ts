@@ -1,16 +1,12 @@
 FROM node:20-alpine
 
-RUN apk update && apk add --no-cache bash curl
-RUN apk add --no-cache perl;
+RUN apk update
 
 # check Node.js version
 RUN node -v
 
-# check Perl version
-RUN perl -v
-
 # set the working directory
-WORKDIR /usr/media-alpha
+WORKDIR /usr/quests
 
 # copy files into working directory
 COPY . .
@@ -19,4 +15,4 @@ COPY . .
 CMD ["bash"]
 
 # install npm requirements
-RUN cd 02_parenthesis_removal && npm install
+RUN npm install
