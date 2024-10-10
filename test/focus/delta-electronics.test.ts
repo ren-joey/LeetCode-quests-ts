@@ -17,12 +17,15 @@ describe(`面試問題：最大子陣列`, () => {
         ],
         [
             [-2, -1, -3, -4, -1, -2, -1, -5, -4], [-1]
+        ],
+        [
+            [7, -1, -3, -4, -1, 2, 1, -5, 4], [7]
         ]
     ];
 
     cases.forEach((c, idx) => {
         test(`
-            <Solution 1>
+            <Solution 1: 4 Arrays>
             Case ${idx+1}
             Input: ${c[0]}
             Expected: ${c[1]}
@@ -32,7 +35,7 @@ describe(`面試問題：最大子陣列`, () => {
         });
 
         test(`
-            <Solution 2>
+            <Solution 2: 1 Array>
             Case ${idx+1}
             Input: ${c[0]}
             Expected: ${c[1]}
@@ -42,7 +45,7 @@ describe(`面試問題：最大子陣列`, () => {
         });
 
         test(`
-            <Solution 3>
+            <Solution 3: No Array>
             Case ${idx+1}
             Input: ${c[0]}
             Expected: ${c[1]}
