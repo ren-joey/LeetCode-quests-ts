@@ -1,5 +1,5 @@
 
-export const question = (input: number[]): number[] => {
+export const maxSubArray = (input: number[]): number[] => {
     const dp1 = new Array(input.length).fill(-Infinity);
     const strLen1 = new Array(input.length).fill(-1);
     const dp2 = new Array(input.length).fill(-Infinity);

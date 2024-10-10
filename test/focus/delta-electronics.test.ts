@@ -1,9 +1,10 @@
 import { describe, expect, test } from "@jest/globals";
-// import { optimalSets } from '../../src/quests/delta-electronics';
-import { maxSubArray } from '../../src/quests/delta-electronics/interview/solution2';
-// import { question } from '../../src/quests/delta-electronics/interview/solution1';
+import { optimalSets } from '../../src/quests/delta-electronics';
+import { maxSubArray as solution1 } from '../../src/quests/delta-electronics/interview/solution1';
+import { maxSubArray as solution2 } from '../../src/quests/delta-electronics/interview/solution2';
+import { maxSubArray as solution3 } from '../../src/quests/delta-electronics/interview/solution3';
 
-describe(`面試問題`, () => {
+describe(`面試問題：最大子陣列`, () => {
     const cases = [
         [
             [-2, 1, -3, 4, -1, 2, 1, -5, 4], [4, -1, 2, 1]
@@ -21,11 +22,32 @@ describe(`面試問題`, () => {
 
     cases.forEach((c, idx) => {
         test(`
+            <Solution 1>
             Case ${idx+1}
-            input: ${c[0]}
-            expected: ${c[1]}
+            Input: ${c[0]}
+            Expected: ${c[1]}
             `, () => {
-            const res = maxSubArray(c[0]);
+            const res = solution1(c[0]);
+            expect(res).toEqual(c[1]);
+        });
+
+        test(`
+            <Solution 2>
+            Case ${idx+1}
+            Input: ${c[0]}
+            Expected: ${c[1]}
+            `, () => {
+            const res = solution2(c[0]);
+            expect(res).toEqual(c[1]);
+        });
+
+        test(`
+            <Solution 3>
+            Case ${idx+1}
+            Input: ${c[0]}
+            Expected: ${c[1]}
+            `, () => {
+            const res = solution3(c[0]);
             expect(res).toEqual(c[1]);
         });
     });
