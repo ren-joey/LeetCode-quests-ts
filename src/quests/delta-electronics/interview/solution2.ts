@@ -1,28 +1,29 @@
-
 export const maxSubArray = (input: number[]): number[] => {
-    const dp = new Array(input.length).fill([-Infinity, -1]);
+    const dp: number[] = new Array(input.length).fill(-Infinity);
 
     let maxSum = input[0];
     let maxLen = 1;
     let maxEndIdx = 0;
-    dp[0] = [input[0], 1];
+    let prevLen = 1;
+    dp[0] = input[0];
 
     for (let i = 1; i < input.length; i += 1) {
         const target = input[i];
-        const [prevDpSum, prevDpLen] = dp[i-1];
 
-        if (target > target + prevDpSum) {
-            dp[i] = [target, 1];
+        if (target > target + dp[i-1]) {
+            dp[i] = target;
+            prevLen = 1;
             if (target > maxSum) {
                 maxSum = target;
                 maxLen = 1;
                 maxEndIdx = i;
             }
         } else {
-            dp[i] = [target + prevDpSum, 1 + prevDpLen];
-            if (target + prevDpSum > maxSum) {
-                maxSum = target + prevDpSum;
-                maxLen = 1 + prevDpLen;
+            dp[i] = target + dp[i-1];
+            prevLen += 1;
+            if (dp[i] > maxSum) {
+                maxSum = dp[i];
+                maxLen = prevLen;
                 maxEndIdx = i;
             }
         }
