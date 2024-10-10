@@ -1,5 +1,3 @@
-// 242-valid-anagram.ts
-
 /**
  * 242. Valid Anagram
  * Algorithm: Hash Table

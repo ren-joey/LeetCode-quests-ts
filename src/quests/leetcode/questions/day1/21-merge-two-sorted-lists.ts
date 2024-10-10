@@ -1,18 +1,10 @@
-// 21-merge-two-sorted-lists.ts
-
 /**
  * 21. Merge Two Sorted Lists
  * Algorithm: Linked List
  * https://leetcode.com/problems/merge-two-sorted-lists/
  */
-class ListNode {
-    val: number;
-    next: ListNode | null;
-    constructor(val?: number, next?: ListNode | null) {
-        this.val = (val === undefined ? 0 : val);
-        this.next = (next === undefined ? null : next);
-    }
-}
+
+import { ListNode } from "../classes/list-node";
 
 export const mergeTwoLists = (list1: ListNode | null, list2: ListNode | null): ListNode | null => {
     let head: ListNode | null = null;

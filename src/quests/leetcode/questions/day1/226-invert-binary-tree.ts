@@ -1,21 +1,10 @@
-// 226-invert-binary-tree.ts
-
 /**
  * 226. Invert Binary Tree
  * Algorithm: Tree Traversal
  * https://leetcode.com/problems/invert-binary-tree/
  */
 
-class TreeNode {
-    val: number;
-    left: TreeNode | null;
-    right: TreeNode | null;
-    constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
-        this.val = (val === undefined ? 0 : val);
-        this.left = (left === undefined ? null : left);
-        this.right = (right === undefined ? null : right);
-    }
-}
+import { TreeNode } from "../classes/tree-node";
 
 const swap = (node: TreeNode | null): void => {
     if (node === null) return;

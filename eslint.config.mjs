@@ -4,6 +4,8 @@ import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
+    eslint.configs.recommended,
+    ...tseslint.configs.recommended,
     {
         rules: {
             semi: 'error',
@@ -11,7 +13,5 @@ export default tseslint.config(
             '@typescript-eslint/no-explicit-any': 'off'
         },
         ignores: ['**/jest.config.js']
-    },
-    eslint.configs.recommended,
-    ...tseslint.configs.recommended
+    }
 );

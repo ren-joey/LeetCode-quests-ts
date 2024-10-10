@@ -1,5 +1,3 @@
-// 125-valid-palindrome.ts
-
 /**
  * 125. Valid Palindrome
  * Algorithm: Two Pointers
