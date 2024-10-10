@@ -1,12 +1,13 @@
 
 export const question = (input: number[]): number[] => {
-    let max = 0;
+    const dp1 = new Array(input.length).fill(-Infinity);
+    const strLen1 = new Array(input.length).fill(-1);
+    const dp2 = new Array(input.length).fill(-Infinity);
+    const strLen2 = new Array(input.length).fill(-1);
+
+    let max = input[0];
     let maxLen = 1;
     let maxIdx = 0;
-    const dp1 = new Array(input.length).fill(-1);
-    const strLen1 = new Array(input.length).fill(-1);
-    const dp2 = new Array(input.length).fill(-1);
-    const strLen2 = new Array(input.length).fill(-1);
     dp1[0] = input[0];
     strLen1[0] = 1;
     dp2[0] = input[0];

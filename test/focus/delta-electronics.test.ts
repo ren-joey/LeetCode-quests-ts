@@ -1,6 +1,7 @@
 import { describe, expect, test } from "@jest/globals";
 // import { optimalSets } from '../../src/quests/delta-electronics';
-import { question } from '../../src/quests/delta-electronics/interview';
+import { maxSubArray } from '../../src/quests/delta-electronics/interview/solution2';
+// import { question } from '../../src/quests/delta-electronics/interview/solution1';
 
 describe(`面試問題`, () => {
     const cases = [
@@ -8,13 +9,13 @@ describe(`面試問題`, () => {
             [-2, 1, -3, 4, -1, 2, 1, -5, 4], [4, -1, 2, 1]
         ],
         [
-            [-2, 7, -3, 4, -1, 2, 1, -5, 4], []
+            [-2, 7, -3, 4, -1, 2, 1, -5, 4], [7, -3, 4, -1, 2, 1]
         ],
         [
-            [-2, -1, -3, -4, -1, 0, -1, -5, -4], []
+            [-2, -1, -3, -4, -1, 0, -1, -5, -4], [0]
         ],
         [
-            [-2, -1, -3, -4, -1, -2, -1, -5, -4], []
+            [-2, -1, -3, -4, -1, -2, -1, -5, -4], [-1]
         ]
     ];
 
@@ -24,10 +25,8 @@ describe(`面試問題`, () => {
             input: ${c[0]}
             expected: ${c[1]}
             `, () => {
-            const res = question(c[0]);
-            console.log(res);
-            // expect(res).toEqual(c[1]);
-            // expect(res).toBe(6);
+            const res = maxSubArray(c[0]);
+            expect(res).toEqual(c[1]);
         });
     });
 });
