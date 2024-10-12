@@ -5,6 +5,8 @@
         "codepaths",
         "tseslint",
         "VLSI",
-        "nums"
+        "nums",
+        "strs",
+        "ptrs"
     ]
 }
