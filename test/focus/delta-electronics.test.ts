@@ -1,8 +1,8 @@
 import { describe, expect, test } from "@jest/globals";
-import { optimalSets } from '../../src/quests/delta-electronics';
-import { maxSubArray as solution1 } from '../../src/quests/delta-electronics/interview/solution1';
-import { maxSubArray as solution2 } from '../../src/quests/delta-electronics/interview/solution2';
-import { maxSubArray as solution3 } from '../../src/quests/delta-electronics/interview/solution3';
+import { optimalSets } from '../../src/delta-electronics';
+import { maxSubArray as solution1 } from '../../src/delta-electronics/interview/solution1';
+import { maxSubArray as solution2 } from '../../src/delta-electronics/interview/solution2';
+import { maxSubArray as solution3 } from '../../src/delta-electronics/interview/solution3';
 
 describe(`面試問題：最大子陣列`, () => {
     const cases = [

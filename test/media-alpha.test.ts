@@ -1,6 +1,6 @@
 import { describe, expect, test } from '@jest/globals';
 // import { parenthesisRemoval } from '../src/solution1';
-import { parenthesisRemoval } from '../src/quests/media-alpha/solution2';
+import { parenthesisRemoval } from '../src/media-alpha/solution2';
 import dotenv from 'dotenv';
 
 dotenv.config();

@@ -5,7 +5,7 @@ import {
     lengthOfLIS,
     longestCommonSubsequence,
     rotate
-} from '../../src/quests/leetcode';
+} from '../../src/leetcode';
 
 const stringSort = (a: string, b: string) => a[0].localeCompare(b[0]);
 
