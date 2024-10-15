@@ -21,3 +21,12 @@ export const hammingWeight_bitwise = (n: number): number => {
     }
     return res;
 };
+
+export const hammingWeight_bitwise_iteration = (n: number): number => {
+    let res = 0;
+    while(n !== 0) {
+        res += n & 1;
+        n >>= 1;
+    }
+    return res;
+};
