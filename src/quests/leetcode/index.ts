@@ -82,3 +82,4 @@ export * from './questions/day5/153-find-minimum-in-rotated-sorted-array';
 export * from './questions/day5/300-longest-increasing-subsequence';
 export * from './questions/day5/371-sum-of-two-integers';
 export * from './questions/day5/1143-longest-common-subsequence';
+export * from './questions/day5/48-rotate-image';

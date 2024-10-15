@@ -3,7 +3,8 @@ import { describe, expect, test } from "@jest/globals";
 import {
     accountsMerge,
     lengthOfLIS,
-    longestCommonSubsequence
+    longestCommonSubsequence,
+    rotate
 } from '../../src/quests/leetcode';
 
 const stringSort = (a: string, b: string) => a[0].localeCompare(b[0]);
@@ -62,6 +63,29 @@ describe(`LeetCode 1143-longest-common-subsequence.ts`, () => {
             Expected: ${c[2]}
             `, () => {
             expect(longestCommonSubsequence(c[0], c[1])).toEqual(c[2]);
+        });
+    });
+});
+
+describe(`LeetCode 48-rotate-image.ts`, () => {
+    const cases: any[] = [
+        [
+            [[1,2,3],[4,5,6],[7,8,9]],
+            [[7,4,1],[8,5,2],[9,6,3]]
+        ],
+        [
+            [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]],
+            [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
+        ]
+    ];
+
+    cases.forEach((c) => {
+        test(`
+            Input: ${c[0]}
+            Expected: ${c[1]}
+            `, () => {
+            rotate(c[0]);
+            expect(c[0]).toEqual(c[1]);
         });
     });
 });
