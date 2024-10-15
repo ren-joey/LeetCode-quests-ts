@@ -12,7 +12,7 @@ export * from './questions/day1/169-majority-element';
 export * from './questions/day1/206-reverse-linked-list';
 export * from './questions/day1/226-invert-binary-tree';
 export * from './questions/day1/232-implement-queue-using-stacks';
-export * from './questions/day1/235-lowest-common-ancestor-of-a-binary-search-tree';
+export { lowestCommonAncestor as lowestCommonAncestor_235 } from './questions/day1/235-lowest-common-ancestor-of-a-binary-search-tree';
 export * from './questions/day1/242-valid-anagram';
 export * from './questions/day1/278-first-bad-version';
 export * from './questions/day1/383-ransom-note';
@@ -61,3 +61,16 @@ export * from './questions/day3/322-coin-change';
 export * from './questions/day3/542-01-matrix';
 export * from './questions/day3/973-k-closest-points-to-origin';
 export * from './questions/day3/994-rotting-oranges';
+
+// ./questions/day4/*.ts
+export * from './questions/day4/8-string-to-integer-atoi';
+export * from './questions/day4/33-search-in-rotated-sorted-array';
+export * from './questions/day4/39-combination-sum';
+export * from './questions/day4/46-permutations';
+export * from './questions/day4/56-merge-intervals';
+export * from './questions/day4/75-sort-colors';
+export * from './questions/day4/139-word-break';
+export { lowestCommonAncestor as lowestCommonAncestor_236 } from './questions/day4/236-lowest-common-ancestor-of-a-binary-tree';
+export * from './questions/day4/416-partition-equal-subset-sum';
+export * from './questions/day4/721-accounts-merge';
+export * from './questions/day4/981-time-based-key-value-store';
