@@ -76,10 +76,22 @@ export * from './questions/day4/721-accounts-merge';
 export * from './questions/day4/981-time-based-key-value-store';
 
 // ./questions/day5/*.ts
-export * from './questions/day5/11-container-with-most-water';
+export * from './questions/day5/19-remove-nth-node-from-end-of-list';
+export * from './questions/day5/48-rotate-image';
+export * from './questions/day5/54-spiral-matrix';
+export * from './questions/day5/55-jump-game';
+export * from './questions/day5/62-unique-paths';
+export * from './questions/day5/73-set-matrix-zeroes';
+export * from './questions/day5/79-word-search';
+export * from './questions/day5/91-decode-ways';
+export * from './questions/day5/128-longest-consecutive-sequence';
+export * from './questions/day5/143-reorder-list';
 export * from './questions/day5/152-maximum-product-subarray';
 export * from './questions/day5/153-find-minimum-in-rotated-sorted-array';
+export { rob as rob_198 } from './questions/day5/198-house-robber';
+export { rob as rob_213 } from './questions/day5/213-house-robber-ii';
 export * from './questions/day5/300-longest-increasing-subsequence';
 export * from './questions/day5/371-sum-of-two-integers';
+export * from './questions/day5/417-pacific-atlantic-water-flow';
+export * from './questions/day5/435-non-overlapping-intervals';
 export * from './questions/day5/1143-longest-common-subsequence';
-export * from './questions/day5/48-rotate-image';
