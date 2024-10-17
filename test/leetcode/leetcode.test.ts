@@ -4,7 +4,8 @@ import {
     accountsMerge,
     lengthOfLIS,
     longestCommonSubsequence,
-    rotate
+    rotate,
+    findAnagrams
 } from '../../src/leetcode';
 
 const stringSort = (a: string, b: string) => a[0].localeCompare(b[0]);
@@ -86,6 +87,26 @@ describe(`LeetCode 48-rotate-image.ts`, () => {
             `, () => {
             rotate(c[0]);
             expect(c[0]).toEqual(c[1]);
+        });
+    });
+});
+
+describe(`LeetCode 438-find-all-anagrams-in-a-string.ts`, () => {
+    const cases: any[] = [
+        ["cbaebabacd", "abc", [0,6]],
+        ["abab", "ab", [0,1,2]],
+        ["a", "a", [0]],
+        ["abab", "abab", [0]],
+        ["abab", "ababa", []]
+    ];
+
+    cases.forEach((c) => {
+        test(`
+            Input: ${c[0]}, ${c[1]}
+            Expected: ${c[2]}
+            `, () => {
+            const res = findAnagrams(c[0], c[1]);
+            expect(res).toEqual(c[2]);
         });
     });
 });

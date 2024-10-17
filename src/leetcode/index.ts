@@ -95,3 +95,6 @@ export * from './week5/371-sum-of-two-integers';
 export * from './week5/417-pacific-atlantic-water-flow';
 export * from './week5/435-non-overlapping-intervals';
 export * from './week5/1143-longest-common-subsequence';
+
+// ./questions/day6/*.ts
+export * from './week6/438-find-all-anagrams-in-a-string';
