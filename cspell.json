@@ -8,6 +8,7 @@
         "nums",
         "strs",
         "ptrs",
+        "indegree",
         "indegrees",
         "atoi",
         "leetcode",

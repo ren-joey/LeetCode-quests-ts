@@ -98,3 +98,6 @@ export * from './week5/1143-longest-common-subsequence';
 
 // ./questions/day6/*.ts
 export * from './week6/438-find-all-anagrams-in-a-string';
+export * from './week6/310-minimum-height-trees';
+export * from './week6/621-task-scheduler';
+export * from './week6/146-lru-cache';
