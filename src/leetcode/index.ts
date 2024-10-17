@@ -16,7 +16,7 @@ export { lowestCommonAncestor as lowestCommonAncestor_235 } from './week1/235-lo
 export * from './week1/242-valid-anagram';
 export * from './week1/278-first-bad-version';
 export * from './week1/383-ransom-note';
-export * from './week1/409-longest-palindrome';
+export { longestPalindrome as longestPalindrome_409 } from './week1/409-longest-palindrome';
 export * from './week1/543-diameter-of-binary-tree';
 export { isBalanced as isBalanced_704 } from './week1/704-binary-search';
 export * from './week1/733-flood-fill';
@@ -97,7 +97,17 @@ export * from './week5/435-non-overlapping-intervals';
 export * from './week5/1143-longest-common-subsequence';
 
 // ./questions/day6/*.ts
-export * from './week6/438-find-all-anagrams-in-a-string';
-export * from './week6/310-minimum-height-trees';
-export * from './week6/621-task-scheduler';
+export { longestPalindrome_n2 as longestPalindrome_5 } from './week6/5-longest-palindromic-substring';
+export * from './week6/17-letter-combinations-of-a-phone-number';
+export * from './week6/31-next-permutation';
+export * from './week6/36-valid-sudoku';
+export * from './week6/78-subsets';
+export * from './week6/105-construct-binary-tree-from-preorder-and-inorder-traversal';
+export * from './week6/134-gas-station';
 export * from './week6/146-lru-cache';
+export * from './week6/199-binary-tree-right-side-view';
+export * from './week6/230-kth-smallest-element-in-a-bst';
+export * from './week6/310-minimum-height-trees';
+export * from './week6/438-find-all-anagrams-in-a-string';
+export * from './week6/621-task-scheduler';
+export * from './week6/739-daily-temperatures';
