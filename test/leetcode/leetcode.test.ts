@@ -4,11 +4,13 @@ import {
     accountsMerge,
     lengthOfLIS,
     longestCommonSubsequence,
-    rotate,
+    rotate_48,
     findAnagrams,
     findMinHeightTrees,
     leastInterval,
-    LRUCache
+    LRUCache,
+    topKFrequent,
+    rotate_189
 } from '../../src/leetcode';
 
 const stringSort = (a: string, b: string) => a[0].localeCompare(b[0]);
@@ -88,7 +90,7 @@ describe(`LeetCode 48-rotate-image.ts`, () => {
             Input: ${c[0]}
             Expected: ${c[1]}
             `, () => {
-            rotate(c[0]);
+            rotate_48(c[0]);
             expect(c[0]).toEqual(c[1]);
         });
     });
@@ -178,6 +180,50 @@ describe(`LeetCode 146-lru-cache.ts`, () => {
 
             c[2] = c[2].map((v: number | null) => v === null ? undefined : v);
             expect(res).toEqual(c[2]);
+        });
+    });
+});
+
+describe(`LeetCode 692-top-k-frequent-words.ts`, () => {
+    const cases: any[] = [
+        [["the", "is", "the", "the", "the", "is", "the"], 1, ["the"]],
+        // [["i", "love", "leetcode", "i", "love", "coding"], 2, ["i", "love"]],
+        // [["the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is"], 4, ["the", "is", "sunny", "day"]]
+    ];
+
+    cases.forEach((c) => {
+        test(`
+            Input: ${c[0]}, ${c[1]}
+            Expected: ${c[2]}
+            `, () => {
+            const res = topKFrequent(c[0], c[1]);
+            expect(res).toEqual(c[2]);
+        });
+    });
+});
+
+describe(`LeetCode 189-rotate-array.ts`, () => {
+    const cases: any[] = [
+        [[1,2,3,4,5,6,7], 3, [5,6,7,1,2,3,4]],
+        [[-1,-100,3,99], 2, [3,99,-1,-100]],
+        [[1,2,3,4,5,6,7], 3, [5,6,7,1,2,3,4]],
+        [[1,2,3,4,5,6,7], 10, [5,6,7,1,2,3,4]],
+        [[1,2,3,4,5,6,7], 0, [1,2,3,4,5,6,7]],
+        [[1,2,3,4,5,6,7], 7, [1,2,3,4,5,6,7]],
+        [[1,2,3,4,5,6,7], 1, [7,1,2,3,4,5,6]],
+        [[1,2,3,4,5,6,7], 2, [6,7,1,2,3,4,5]],
+        [[1,2,3,4,5,6,7], 4, [4,5,6,7,1,2,3]],
+        [[1,2,3,4,5,6,7], 5, [3,4,5,6,7,1,2]],
+        [[1,2,3,4,5,6,7], 6, [2,3,4,5,6,7,1]]
+    ];
+
+    cases.forEach((c) => {
+        test(`
+            Input: ${c[0]}, ${c[1]}
+            Expected: ${c[2]}
+            `, () => {
+            rotate_189(c[0], c[1]);
+            expect(c[0]).toEqual(c[2]);
         });
     });
 });

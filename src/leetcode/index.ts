@@ -77,7 +77,7 @@ export * from './week4/981-time-based-key-value-store';
 
 // ./questions/day5/*.ts
 export * from './week5/19-remove-nth-node-from-end-of-list';
-export * from './week5/48-rotate-image';
+export { rotate as rotate_48 } from './week5/48-rotate-image';
 export * from './week5/54-spiral-matrix';
 export * from './week5/55-jump-game';
 export * from './week5/62-unique-paths';
@@ -111,3 +111,7 @@ export * from './week6/310-minimum-height-trees';
 export * from './week6/438-find-all-anagrams-in-a-string';
 export * from './week6/621-task-scheduler';
 export * from './week6/739-daily-temperatures';
+
+// ./questions/day7/*.ts
+export * from './week7/692-top-k-frequent-words';
+export { rotate as rotate_189 } from './week7/189-rotate-array';

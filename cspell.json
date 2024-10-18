@@ -15,6 +15,7 @@
         "manacher",
         "preorder",
         "inorder",
-        "postorder"
+        "postorder",
+        "prereq"
     ]
 }
