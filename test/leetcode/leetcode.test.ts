@@ -10,7 +10,8 @@ import {
     leastInterval,
     LRUCache,
     topKFrequent,
-    rotate_189
+    rotate_189,
+    decodeString
 } from '../../src/leetcode';
 
 const stringSort = (a: string, b: string) => a[0].localeCompare(b[0]);
@@ -224,6 +225,26 @@ describe(`LeetCode 189-rotate-array.ts`, () => {
             `, () => {
             rotate_189(c[0], c[1]);
             expect(c[0]).toEqual(c[2]);
+        });
+    });
+});
+
+describe(`LeetCode 394-decode-string.ts`, () => {
+    const cases: any[] = [
+        ["3[a]2[bc]", "aaabcbc"],
+        // ["3[a2[c]]", "accaccacc"],
+        // ["2[abc]3[cd]ef", "abcabccdcdcdef"],
+        // ["abc3[cd]xyz", "abccdcdcdxyz"],
+        // ["100[leetcode]", "leetcode".repeat(100)]
+    ];
+
+    cases.forEach((c) => {
+        test(`
+            Input: ${c[0]}
+            Expected: ${c[1]}
+            `, () => {
+            const res = decodeString(c[0]);
+            expect(res).toEqual(c[1]);
         });
     });
 });

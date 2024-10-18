@@ -113,5 +113,17 @@ export * from './week6/621-task-scheduler';
 export * from './week6/739-daily-temperatures';
 
 // ./questions/day7/*.ts
-export * from './week7/692-top-k-frequent-words';
+export * from './week7/24-swap-nodes-in-pairs';
+export * from './week7/49-group-anagrams';
+export * from './week7/49-path-sum-ii';
 export { rotate as rotate_189 } from './week7/189-rotate-array';
+export * from './week7/210-course-schedule-ii';
+export * from './week7/211-design-add-and-search-words-data-structure';
+export * from './week7/287-find-the-duplicate-number';
+export * from './week7/328-odd-even-linked-list';
+export * from './week7/394-decode-string';
+export * from './week7/424-longest-repeating-character-replacement';
+export * from './week7/525-contiguous-array';
+export * from './week7/658-find-k-closest-elements';
+export * from './week7/662-maximum-width-of-binary-tree';
+export * from './week7/692-top-k-frequent-words';
