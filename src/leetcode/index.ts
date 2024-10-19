@@ -127,3 +127,8 @@ export * from './week7/525-contiguous-array';
 export * from './week7/658-find-k-closest-elements';
 export * from './week7/662-maximum-width-of-binary-tree';
 export * from './week7/692-top-k-frequent-words';
+
+// ./questions/day8/*.ts
+export * from './week8/261-graph-valid-tree';
+export * from './week8/1730-shortest-path-to-get-food';
+export * from './week8/2-add-two-numbers';
