@@ -115,7 +115,7 @@ export * from './week6/739-daily-temperatures';
 // ./questions/day7/*.ts
 export * from './week7/24-swap-nodes-in-pairs';
 export * from './week7/49-group-anagrams';
-export * from './week7/49-path-sum-ii';
+export { pathSum as pathSum_49 } from './week7/49-path-sum-ii';
 export { rotate as rotate_189 } from './week7/189-rotate-array';
 export * from './week7/210-course-schedule-ii';
 export * from './week7/211-design-add-and-search-words-data-structure';
@@ -129,6 +129,17 @@ export * from './week7/662-maximum-width-of-binary-tree';
 export * from './week7/692-top-k-frequent-words';
 
 // ./questions/day8/*.ts
-export * from './week8/261-graph-valid-tree';
-export * from './week8/1730-shortest-path-to-get-food';
 export * from './week8/2-add-two-numbers';
+export * from './week8/22-generate-parentheses';
+export * from './week8/50-powx-n';
+export * from './week8/74-search-a-2d-matrix';
+export * from './week8/103-binary-tree-zigzag-level-order-traversal';
+export * from './week8/148-sort-list';
+export * from './week8/211-maximal-square';
+export * from './week8/215-kth-largest-element-in-an-array';
+export * from './week8/261-graph-valid-tree';
+export { pathSum as pathSum_437 } from './week8/437-path-sum-iii';
+export * from './week8/528-random-pick-with-weight';
+export * from './week8/560-subarray-sum-equals-k';
+export * from './week8/735-asteroid-collision';
+export * from './week8/1730-shortest-path-to-get-food';

@@ -13,7 +13,8 @@ import {
     rotate_189,
     decodeString,
     getFood,
-    validTree
+    validTree,
+    myPow
 } from '../../src/leetcode';
 
 const stringSort = (a: string, b: string) => a[0].localeCompare(b[0]);
@@ -288,3 +289,21 @@ const stringSort = (a: string, b: string) => a[0].localeCompare(b[0]);
 //     });
 // });
 
+describe(`LeetCode 50-powx-n.ts`, () => {
+    const cases: any[] = [
+        // [2.00000, 10, 1024.00000],
+        // [2.10000, 3, 9.26100],
+        // [2.00000, -2, 0.25000],
+        [-3.0, -5, -0.00412]
+    ];
+
+    cases.forEach((c) => {
+        test(`
+            Input: ${c[0]}, ${c[1]}
+            Expected: ${c[2]}
+            `, () => {
+            const res = myPow(c[0], c[1]);
+            expect(res).toBeCloseTo(c[2]);
+        });
+    });
+});
