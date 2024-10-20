@@ -143,3 +143,5 @@ export * from './week8/528-random-pick-with-weight';
 export * from './week8/560-subarray-sum-equals-k';
 export * from './week8/735-asteroid-collision';
 export * from './week8/1730-shortest-path-to-get-food';
+
+// ./questions/day9/*.ts
