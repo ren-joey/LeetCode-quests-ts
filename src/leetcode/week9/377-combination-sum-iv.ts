@@ -38,7 +38,24 @@
  */
 
 export const combinationSum4 = (nums: number[], target: number): number => {
+    const dp: number[] = new Array(target + 1).fill(-1);
+    dp[0] = 1;
 
+    const helper = (nums: number[], target: number): number => {
+        if (dp[target] !== -1) {
+            return dp[target];
+        }
+        let res = 0;
+        for (let i = 0; i < nums.length; i++) {
+            if (target >= nums[i]) {
+                res += helper(nums, target - nums[i]);
+            }
+        }
+        dp[target] = res;
+        return res;
+    };
+
+    return helper(nums, target);
 };
 
 export const combinationSum4_brute_force = (nums: number[], target: number): number => {
