@@ -6,33 +6,25 @@
 
 export const isValid = (s: string): boolean => {
     const stack: string[] = [];
-    let validation: boolean = true;
+    const matches: string[] = ['(', '[', '{'];
+    let res = true;
 
-    [...s].some((char: string) => {
-        if (['{','[','('].includes(char)) {
-            stack.push(char);
-        } else if (char === ')') {
-            const check = stack.pop();
-            if (check !== '(') {
-                validation = false;
-                return true;
-            }
-        } else if (char === ']') {
-            const check = stack.pop();
-            if (check !== '[') {
-                validation = false;
-                return true;
-            }
-        } else if (char === '}') {
-            const check = stack.pop();
-            if (check !== '{') {
-                validation = false;
-                return true;
+    for (let i = 0; i < s.length; i += 1) {
+        const c = s[i];
+        if (matches.includes(c)) stack.push(c);
+        else {
+            const el = stack.pop();
+            if (
+                c === ')' && el !== '('
+                || c === ']' && el !== '['
+                || c === '}' && el !== '{'
+            ) {
+                res = false;
+                break;
             }
         }
-    });
+    }
 
-    if (stack.length !== 0) validation = false;
-
-    return validation;
+    if (stack.length > 0) res = false;
+    return res;
 };

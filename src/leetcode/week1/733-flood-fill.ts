@@ -16,7 +16,7 @@ const fillAround = (image: number[][], sr: number, sc: number, color: number, bg
     image = fillAround(image, sr, sc+1, color, bg_color);
     image = fillAround(image, sr, sc-1, color, bg_color);
 
-    return image
+    return image;
 };
 
 export const floodFill = (image: number[][], sr: number, sc: number, color: number): number[][] => {
