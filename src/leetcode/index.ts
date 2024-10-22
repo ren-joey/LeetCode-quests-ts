@@ -18,7 +18,7 @@ export * from './week1/278-first-bad-version';
 export * from './week1/383-ransom-note';
 export { longestPalindrome as longestPalindrome_409 } from './week1/409-longest-palindrome';
 export * from './week1/543-diameter-of-binary-tree';
-export { isBalanced as isBalanced_704 } from './week1/704-binary-search';
+export * from './week1/704-binary-search';
 export * from './week1/733-flood-fill';
 
 // ./questions/day2/*.ts

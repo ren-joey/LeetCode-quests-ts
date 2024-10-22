@@ -5,19 +5,18 @@
  * https://leetcode.com/problems/binary-search/
  */
 
-import { TreeNode } from "../classes/tree-node";
+export const search = (nums: number[], target: number): number => {
+    let right = nums.length - 1;
+    let left = 0;
 
-const search = (root: TreeNode|null): number => {
-    if (root === null) return 0;
-    const left_bf = search(root.left);
-    const right_bf = search(root.right);
+    while (left < right) {
+        const idx = Math.floor((right + left + 1) / 2);
+        if (target < nums[idx]) {
+            right = idx - 1;
+        } else {
+            left = idx;
+        }
+    }
 
-    if (left_bf === -1 || right_bf === -1) return -1;
-    if (Math.abs(left_bf - right_bf) > 1) return -1;
-
-    return Math.max(left_bf, right_bf) + 1;
-};
-
-export const isBalanced = (root: TreeNode | null): boolean => {
-    return search(root) !== -1;
+    return nums[left] === target ? left : -1;
 };
