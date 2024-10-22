@@ -145,3 +145,12 @@ export * from './week8/735-asteroid-collision';
 export * from './week8/1730-shortest-path-to-get-food';
 
 // ./questions/day9/*.ts
+export * from './week9/7-reverse-integer';
+export * from './week9/16-3sum-closest';
+export * from './week9/61-rotate-list';
+export * from './week9/179-largest-number';
+export * from './week9/227-basic-calculator-ii';
+export * from './week9/377-combination-sum-iv';
+export * from './week9/380-insert-delete-getrandom-o1';
+export * from './week9/787-cheapest-flights-within-k-stops';
+export * from './week9/863-all-nodes-distance-k-in-binary-tree';

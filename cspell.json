@@ -16,6 +16,7 @@
         "preorder",
         "inorder",
         "postorder",
-        "prereq"
+        "prereq",
+        "getrandom"
     ]
 }
