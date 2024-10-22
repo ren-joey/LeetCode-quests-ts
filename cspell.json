@@ -17,6 +17,7 @@
         "inorder",
         "postorder",
         "prereq",
-        "getrandom"
+        "getrandom",
+        "tsmc"
     ]
 }
