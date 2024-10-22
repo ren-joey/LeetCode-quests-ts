@@ -18,7 +18,7 @@ export * from './week1/278-first-bad-version';
 export * from './week1/383-ransom-note';
 export { longestPalindrome as longestPalindrome_409 } from './week1/409-longest-palindrome';
 export * from './week1/543-diameter-of-binary-tree';
-export * from './week1/704-binary-search';
+export { search as search_704 } from './week1/704-binary-search';
 export * from './week1/733-flood-fill';
 
 // ./questions/day2/*.ts
@@ -64,7 +64,7 @@ export * from './week3/994-rotting-oranges';
 
 // ./questions/day4/*.ts
 export * from './week4/8-string-to-integer-atoi';
-export * from './week4/33-search-in-rotated-sorted-array';
+export { search as search_33 } from './week4/33-search-in-rotated-sorted-array';
 export * from './week4/39-combination-sum';
 export * from './week4/46-permutations';
 export * from './week4/56-merge-intervals';
