@@ -31,3 +31,42 @@
  *      At most 2 * 105 calls will be made to insert, remove, and getRandom.
  *      There will be at least one element in the data structure when getRandom is called.
  */
+
+export class RandomizedSet {
+    private list: number[];
+    private map: { [key: number]: number };
+
+    constructor() {
+        this.list = [];
+        this.map = {};
+    }
+
+    private search(val: number): boolean {
+        return val in this.map;
+    }
+
+    insert(val: number): boolean {
+        if (this.search(val)) return false;
+
+        this.list.push(val);
+        this.map[val] = this.list.length - 1;
+        return true;
+    }
+
+    remove(val: number): boolean {
+        if (!this.search(val)) return false;
+
+        const index = this.map[val];
+        const lastElement = this.list[this.list.length - 1];
+        this.list[index] = lastElement;
+        this.map[lastElement] = index;
+        this.list.pop();
+        delete this.map[val];
+        return true;
+    }
+
+    getRandom(): number {
+        const randomIndex = Math.floor(Math.random() * this.list.length);
+        return this.list[randomIndex];
+    }
+}
