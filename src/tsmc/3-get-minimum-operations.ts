@@ -1,4 +1,5 @@
 /**
+ * FIXME: need to know how the algorithm works
  * 3. Flip Operations
 
 A tree of
