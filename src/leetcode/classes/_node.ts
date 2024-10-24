@@ -11,3 +11,12 @@ export class _Node {
         this.neighbors = (neighbors===undefined ? [] : neighbors);
     }
 }
+
+export class VisitedNode extends _Node {
+    visited: boolean;
+
+    constructor(val?: number, neighbors?: _Node[], visited?: boolean) {
+        super(val, neighbors);
+        this.visited = (visited === undefined ? false : visited);
+    }
+}
