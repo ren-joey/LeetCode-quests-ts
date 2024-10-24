@@ -51,8 +51,6 @@ export const countComponents = (n: number, edges: number[][]): number => {
             const node = queue.shift()!;
             visited[node] = true;
 
-            console.log(node, nodes[node]);
-
             for (const neighbor of nodes[node]) {
                 if (!visited[neighbor]) queue.push(neighbor);
             }
