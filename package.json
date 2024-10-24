@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "test:focus": "jest test/focus/*",
-    "test:leetcode": "jest test/leetcode/*"
+    "test:leetcode": "jest test/leetcode/*",
+    "test:util": "jest test/utils/*"
   },
   "keywords": [],
   "author": "",

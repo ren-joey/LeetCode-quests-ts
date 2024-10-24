@@ -11,4 +11,17 @@ export class TreeNode {
         this.left = (left === undefined ? null : left);
         this.right = (right === undefined ? null : right);
     }
+
+    public findNode = (val: number): TreeNode | null => {
+        if (this.val === val) return this;
+        if (this.left) {
+            const left = this.left.findNode(val);
+            if (left) return left;
+        }
+        if (this.right) {
+            const right = this.right.findNode(val);
+            if (right) return right;
+        }
+        return null;
+    };
 }

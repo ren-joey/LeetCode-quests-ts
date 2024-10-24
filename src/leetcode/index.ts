@@ -154,3 +154,6 @@ export * from './week9/377-combination-sum-iv';
 export * from './week9/380-insert-delete-getrandom-o1';
 export * from './week9/787-cheapest-flights-within-k-stops';
 export * from './week9/863-all-nodes-distance-k-in-binary-tree';
+
+// ./questions/day10/*.ts
+export * from './week10/285-inorder-successor-in-bst';
