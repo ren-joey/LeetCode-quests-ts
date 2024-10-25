@@ -17,7 +17,8 @@ import {
     myPow,
     inorderSuccessor,
     countComponents,
-    minKnightMoves
+    minKnightMoves,
+    minMeetingRooms
 } from '../../src/leetcode';
 import { arrayToBinaryTree } from "../../src/utils/array-to-binary-tree";
 
@@ -373,6 +374,26 @@ describe(`LeetCode 1197-minimum-knight-moves.ts`, () => {
             Expected: ${c[2]}
             `, () => {
             expect(minKnightMoves(c[0], c[1])).toEqual(c[2]);
+        });
+    });
+});
+
+describe('253. Meeting Rooms II', () => {
+    const cases: [number[][], number][] = [
+        // input, output
+        [[[0, 30],[5, 10],[15, 20]], 2],
+        [[[7,10],[2,4]], 1],
+    ];
+
+    cases.forEach((c, idx) => {
+        test(`
+            Case ${idx+1}
+            Input: ${c[0]}
+            Expected: ${c[1]}
+            `, () => {
+            expect(
+                minMeetingRooms(c[0])
+            ).toEqual(c[1]);
         });
     });
 });
