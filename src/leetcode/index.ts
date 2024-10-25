@@ -158,3 +158,4 @@ export * from './week9/863-all-nodes-distance-k-in-binary-tree';
 // ./questions/day10/*.ts
 export * from './week10/285-inorder-successor-in-bst';
 export * from './week10/323-number-of-connected-components-in-an-undirected-graph';
+export * from './week10/1197-minimum-knight-moves';
