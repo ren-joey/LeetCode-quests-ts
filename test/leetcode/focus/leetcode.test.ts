@@ -1,36 +1,28 @@
 import { describe, expect, test } from "@jest/globals";
 
 import {
-    Codec
+    minWindow
 } from '../../../src/leetcode';
 
-describe('271. Encode and Decode Strings', () => {
-    const cases: [string[], string][] = [
-        [["Hello", "World"], "5/Hello5/World"],
-        [["Hello", "World", "Foo", "Bar"], "5/Hello5/World3/Foo3/Bar"],
-        [["Hello", "World", "Foo", "Bar", "Baz"], "5/Hello5/World3/Foo3/Bar3/Baz"],
+describe('76. Minimum Window Substring', () => {
+    const cases: [string, string, string][] = [
+        ["ADOBECODEBANC", "ABC", "BANC"],
+        ["a", "a", "a"],
+        ["a", "aa", ""],
+        ["aa", "aa", "aa"],
+        ["aaaaaabab", "aabb", "abab"],
+        ["ADOBECODEBANC", "ABC", "BANC"]
     ];
 
-    const codec = new Codec();
     cases.forEach((c, idx) => {
         test(`
-            Case ${idx+1} encode
-            Input: ${c[0]}
-            Expected: ${c[1]}
+            Case ${idx+1}
+            Input: ${c[0]}, ${c[1]}
+            Expected: ${c[2]}
             `, () => {
             expect(
-                codec.encode(c[0])
-            ).toEqual(c[1]);
-        });
-
-        test(`
-            Case ${idx+1} decode
-            Input: ${c[1]}
-            Expected: ${c[0]}
-            `, () => {
-            expect(
-                codec.decode(c[1])
-            ).toEqual(c[0]);
+                minWindow(c[0], c[1])
+            ).toEqual(c[2]);
         });
     });
 });
