@@ -1,28 +1,39 @@
 import { describe, expect, test } from "@jest/globals";
 
 import {
-    minWindow
+    serialize,
+    deserialize
 } from '../../../src/leetcode';
+import { arrayToBinaryTree } from "../../../src/utils/array-to-binary-tree";
+import { BinaryTreeTraversal } from "../../../src/utils/binary-tree-traversal";
 
-describe('76. Minimum Window Substring', () => {
-    const cases: [string, string, string][] = [
-        ["ADOBECODEBANC", "ABC", "BANC"],
-        ["a", "a", "a"],
-        ["a", "aa", ""],
-        ["aa", "aa", "aa"],
-        ["aaaaaabab", "aabb", "abab"],
-        ["ADOBECODEBANC", "ABC", "BANC"]
+describe('297. Serialize and Deserialize Binary Tree', () => {
+    const cases: [(number|null)[]][] = [
+        [[1,2,3,null,null,4,5]],
+        [[]],
+        [[4,-7,-3,null,null,-9,-3,9,-7,-4,null,6,null,-6,-6,null,null,0,6,5,null,9,null,null,-1,-4,null,null,null,-2]],
     ];
 
     cases.forEach((c, idx) => {
         test(`
             Case ${idx+1}
-            Input: ${c[0]}, ${c[1]}
-            Expected: ${c[2]}
+            Input: ${c[0]}
+            Expected: ${c[0]}
             `, () => {
+            const root = arrayToBinaryTree(c[0]);
+            const str = serialize(root);
+            const newRoot = deserialize(str);
             expect(
-                minWindow(c[0], c[1])
-            ).toEqual(c[2]);
+                BinaryTreeTraversal.inOrderTraversal(newRoot)
+            ).toEqual(
+                BinaryTreeTraversal.inOrderTraversal(root)
+            );
+
+            expect(
+                BinaryTreeTraversal.preOrderTraversal(newRoot)
+            ).toEqual(
+                BinaryTreeTraversal.preOrderTraversal(root)
+            );
         });
     });
 });

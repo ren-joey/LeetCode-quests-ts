@@ -165,3 +165,4 @@ export * from './week10/1197-minimum-knight-moves';
 
 // ./questions/day11/*.ts
 export * from './week11/76-minimum-window-substring';
+export * from './week11/297-serialize-and-deserialize-binary-tree';

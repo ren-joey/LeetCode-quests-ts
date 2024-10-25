@@ -28,7 +28,6 @@
  */
 
 export const validTree = (n: number, edges: number[][]): boolean => {
-    console.log(n, edges);
 
     // create graph
     const graph: number[][] = Array.from({ length: n }, () => []);

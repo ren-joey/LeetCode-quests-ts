@@ -1,6 +1,6 @@
 import { TreeNode } from "../leetcode/classes/tree-node";
 
-export class binaryTreeTraversal {
+export class BinaryTreeTraversal {
     static inOrderTraversal(root: TreeNode | null): number[] {
         const res: number[] = [];
 
@@ -47,5 +47,23 @@ export class binaryTreeTraversal {
         postorder(root);
 
         return res;
+    }
+
+    static traversalToTree(inorder: number[], preorder: number[]): TreeNode | null {
+        if (inorder.length === 0) return null;
+
+        const root = new TreeNode(preorder[0]);
+        const rootIndex = inorder.indexOf(preorder[0]);
+
+        const leftInorder = inorder.slice(0, rootIndex);
+        const rightInorder = inorder.slice(rootIndex + 1);
+
+        const leftPreorder = preorder.slice(1, leftInorder.length + 1);
+        const rightPreorder = preorder.slice(leftInorder.length + 1);
+
+        root.left = this.traversalToTree(leftInorder, leftPreorder);
+        root.right = this.traversalToTree(rightInorder, rightPreorder);
+
+        return root;
     }
 }

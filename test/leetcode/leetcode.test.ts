@@ -19,7 +19,8 @@ import {
     countComponents,
     minKnightMoves,
     minMeetingRooms,
-    Codec
+    Codec,
+    minWindow
 } from '../../src/leetcode';
 import { arrayToBinaryTree } from "../../src/utils/array-to-binary-tree";
 
@@ -241,10 +242,10 @@ describe(`LeetCode 189-rotate-array.ts`, () => {
 describe(`LeetCode 394-decode-string.ts`, () => {
     const cases: any[] = [
         ["3[a]2[bc]", "aaabcbc"],
-        // ["3[a2[c]]", "accaccacc"],
-        // ["2[abc]3[cd]ef", "abcabccdcdcdef"],
-        // ["abc3[cd]xyz", "abccdcdcdxyz"],
-        // ["100[leetcode]", "leetcode".repeat(100)]
+        ["3[a2[c]]", "accaccacc"],
+        ["2[abc]3[cd]ef", "abcabccdcdcdef"],
+        ["abc3[cd]xyz", "abccdcdcdxyz"],
+        ["100[leetcode]", "leetcode".repeat(100)]
     ];
 
     cases.forEach((c) => {
@@ -426,6 +427,29 @@ describe('271. Encode and Decode Strings', () => {
             expect(
                 codec.decode(c[1])
             ).toEqual(c[0]);
+        });
+    });
+});
+
+describe('76. Minimum Window Substring', () => {
+    const cases: [string, string, string][] = [
+        ["ADOBECODEBANC", "ABC", "BANC"],
+        ["a", "a", "a"],
+        ["a", "aa", ""],
+        ["aa", "aa", "aa"],
+        ["aaaaaabab", "aabb", "abab"],
+        ["ADOBECODEBANC", "ABC", "BANC"]
+    ];
+
+    cases.forEach((c, idx) => {
+        test(`
+            Case ${idx+1}
+            Input: ${c[0]}, ${c[1]}
+            Expected: ${c[2]}
+            `, () => {
+            expect(
+                minWindow(c[0], c[1])
+            ).toEqual(c[2]);
         });
     });
 });

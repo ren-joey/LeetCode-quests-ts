@@ -1,6 +1,6 @@
 import { describe, expect, test } from '@jest/globals';
 import { arrayToBinaryTree } from '../../src/utils/array-to-binary-tree';
-import { binaryTreeTraversal } from '../../src/utils/binary-tree-traversal';
+import { BinaryTreeTraversal } from '../../src/utils/binary-tree-traversal';
 
 describe(`Utils: array-to-binary-tree.ts`, () => {
     const cases = [
@@ -20,7 +20,7 @@ describe(`Utils: array-to-binary-tree.ts`, () => {
             `, () => {
             const res = arrayToBinaryTree(c[0]);
             expect(
-                binaryTreeTraversal.inOrderTraversal(res)
+                BinaryTreeTraversal.inOrderTraversal(res)
             ).toEqual(c[1]);
         });
 
@@ -32,7 +32,7 @@ describe(`Utils: array-to-binary-tree.ts`, () => {
                 `, () => {
                 const res = arrayToBinaryTree(c[0]);
                 expect(
-                    binaryTreeTraversal.preOrderTraversal(res)
+                    BinaryTreeTraversal.preOrderTraversal(res)
                 ).toEqual(c[2]);
             });
         }
@@ -45,7 +45,7 @@ describe(`Utils: array-to-binary-tree.ts`, () => {
                 `, () => {
                 const res = arrayToBinaryTree(c[0]);
                 expect(
-                    binaryTreeTraversal.postOrderTraversal(res)
+                    BinaryTreeTraversal.postOrderTraversal(res)
                 ).toEqual(c[3]);
             });
         }
