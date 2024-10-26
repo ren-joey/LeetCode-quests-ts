@@ -1,5 +1,6 @@
 /**
- * FIXME:
+ * TODO:
+ * FIXME: Implement heap
  * 295. Find Median from Data Stream
  * Algorithm: Heap, Priority Queue
  * https://leetcode.com/problems/find-median-from-data-stream/
@@ -36,17 +37,33 @@
  *      If 99% of all integer numbers from the stream are in the range [0, 100], how would you optimize your solution?
  */
 
-export class MedianFinder {
-    constructor() {
+import { Heap } from 'heap-js';
 
+export class MedianFinder {
+    private small: Heap<number>;
+    private large: Heap<number>;
+
+    constructor() {
+        this.small = new Heap<number>();
+        this.large = new Heap<number>(Heap.maxComparator);
     }
 
     addNum(num: number): void {
-
+        if (this.small.size() === this.large.size()) {
+            this.small.push(num);
+            this.large.push(this.small.pop()!);
+        } else {
+            this.large.push(num);
+            this.small.push(this.large.pop()!);
+        }
     }
 
     findMedian(): number {
-
+        if (this.small.size() === this.large.size()) {
+            return (this.large.peek()! + this.small.peek()!) / 2;
+        } else {
+            return this.large.peek()!;
+        }
     }
 }
 
