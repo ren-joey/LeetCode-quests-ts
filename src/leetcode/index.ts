@@ -167,3 +167,4 @@ export * from './week10/1197-minimum-knight-moves';
 export * from './week11/76-minimum-window-substring';
 export * from './week11/297-serialize-and-deserialize-binary-tree';
 export * from './week11/42-trapping-rain-water';
+export * from './week11/295-find-median-from-data-stream';
