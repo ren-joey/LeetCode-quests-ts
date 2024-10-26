@@ -2,7 +2,7 @@ import { describe, expect, test } from "@jest/globals";
 
 import {
     trap
-} from '../../../src/leetcode';
+} from '../../src/leetcode';
 
 
 describe('42. Trapping Rain Water', () => {
