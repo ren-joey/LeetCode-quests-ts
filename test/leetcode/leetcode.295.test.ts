@@ -2,7 +2,7 @@ import { describe, expect, test } from "@jest/globals";
 
 import {
     MedianFinder
-} from '../../../src/leetcode';
+} from '../../src/leetcode';
 
 describe(`295. Find Median from Data Stream`, () => {
     const cases: [number[][], (null | number)[]][] = [
