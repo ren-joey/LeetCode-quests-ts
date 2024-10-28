@@ -2,7 +2,7 @@ import { describe, expect, test } from "@jest/globals";
 
 import {
     jobScheduling
-} from '../../../src/leetcode';
+} from '../../src/leetcode';
 
 describe(`1235. Maximum Profit in Job Scheduling`, () => {
     const cases: [number[], number[], number[], number][] = [
