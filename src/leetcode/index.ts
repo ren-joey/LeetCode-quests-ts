@@ -170,3 +170,4 @@ export * from './week11/42-trapping-rain-water';
 export * from './week11/295-find-median-from-data-stream';
 export * from './week11/127-word-ladder';
 export { calculate as calculate_224, calculate_stack } from './week11/224-basic-calculator';
+export * from './week11/1235-maximum-profit-in-job-scheduling';

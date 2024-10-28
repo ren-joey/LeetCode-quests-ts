@@ -2,7 +2,7 @@ import { describe, expect, test } from "@jest/globals";
 
 import {
     calculate_stack as calculate
-} from '../../../src/leetcode';
+} from '../../src/leetcode';
 
 describe(`224. Basic Calculator`, () => {
     const cases: [string, number][] = [
