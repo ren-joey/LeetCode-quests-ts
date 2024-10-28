@@ -1,4 +1,6 @@
 /**
+ * FIXME:
+ * TODO:
  * 127. Word Ladder
  * Algorithm: BFS
  * https://leetcode.com/problems/word-ladder/
@@ -30,5 +32,36 @@
  */
 
 export const ladderLength = (beginWord: string, endWord: string, wordList: string[]): number => {
+    const set = new Set(wordList);
+    if (!set.has(endWord)) return 0;
+
+    const queue: string[] = [beginWord];
+    const visited = new Set<string>();
+    visited.add(beginWord);
+
+    let changes = 1;
+
+    while (queue.length > 0) {
+        const size = queue.length;
+        for (let i = 0; i < size; i += 1) {
+            const word = queue.shift()!;
+            if (word === endWord) return changes;
+
+            for (let j = 0; j < word.length; j += 1) {
+                for (let k = 97; k <= 122; k += 1) { // ASCII values for 'a' to 'z'
+                    const arr = word.split('');
+                    arr[j] = String.fromCharCode(k);
+
+                    const str = arr.join('');
+                    if (set.has(str) && !visited.has(str)) {
+                        queue.push(str);
+                        visited.add(str);
+                    }
+                }
+            }
+        }
+        changes += 1;
+    }
+
     return 0;
 };

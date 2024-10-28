@@ -2,7 +2,7 @@ import { describe, expect, test } from "@jest/globals";
 
 import {
     ladderLength
-} from '../../../src/leetcode';
+} from '../../src/leetcode';
 
 describe(`127. Word Ladder`, () => {
     const cases: [string, string, string[], number][] = [
