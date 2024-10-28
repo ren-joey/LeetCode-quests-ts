@@ -1,7 +1,7 @@
 import { describe, expect, test } from "@jest/globals";
-import { closedPaths } from '../../src/tsmc/1-closed-paths';
-import { minimumTime } from '../../src/tsmc/2-minimum-time';
-import { getMinimumOperations } from '../../src/tsmc/3-get-minimum-operations';
+import { closedPaths } from '../src/tsmc/1-closed-paths';
+import { minimumTime } from '../src/tsmc/2-minimum-time';
+import { getMinimumOperations } from '../src/tsmc/3-get-minimum-operations';
 
 describe(`Quest: 1-closed-paths.ts`, () => {
     const cases = [

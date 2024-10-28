@@ -52,3 +52,37 @@ docker rm hw
 # Remove the image "hw"
 docker rmi hw
 ```
+
+## Run Testing on Specific File
+### Windows
+Add script in `package.json`
+```json
+{
+    "scripts": {
+        "test:leetcode": "jest test/leetcode/leetcode.${npm_config_no}.test.ts",
+    }
+}
+```
+Run command with specific quest number
+```bash
+npm run test:leetcode --no=<quest_number>
+```
+### Unix
+Add script in `package.json`
+```json
+{
+    "scripts": {
+        "test:leetcode": "jest test/leetcode/*.$NO.test.ts",
+    }
+}
+```
+Run command with specific quest number
+```bash
+NO=<quest_number> npm run test:leetcode
+```
+
+## Use Debugger
+1. Rename the test file which you want to debug by adding `focus-` prefix.
+ex. `leetcode.23.test.ts` to `focus-leetcode.23.test.ts`.
+2. Go to debugger tab, at the top-left, you can see `RUN AND DEBUG`. Choose `Node.js`, then select `Run Script: test:leetcode:focus`
+3. Press `Start Debugging (F5)` to start the process.

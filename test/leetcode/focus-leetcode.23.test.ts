@@ -2,17 +2,17 @@ import { describe, expect, test } from "@jest/globals";
 
 import {
     mergeKLists
-} from '../../../src/leetcode';
+} from '../../src/leetcode';
 
 import {
     arrayToLinkedList
-} from '../../../src/utils/array-to-linked-list';
+} from '../../src/utils/array-to-linked-list';
 
 import {
     linkedListToArray
-} from '../../../src/utils/linked-list-to-array';
+} from '../../src/utils/linked-list-to-array';
 
-import { ListNode } from "../../../src/leetcode/classes/list-node";
+import { ListNode } from "../../src/leetcode/classes/list-node";
 
 describe(`23. Merge k Sorted Lists`, () => {
     const cases: [number[][], number[]][] = [

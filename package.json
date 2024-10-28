@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:focus": "jest test/focus/*",
-    "test:leetcode": "jest test/leetcode/*.$NO.test.ts",
-    "test:leetcode:focus": "jest test/leetcode/focus/*",
+    "test:focus": "jest test/focus*",
+    "test:leetcode": "jest test/leetcode/leetcode.${npm_config_no}.test.ts",
+    "test:leetcode:focus": "jest test/leetcode/focus*",
     "test:leetcode:all": "jest test/leetcode/*",
     "test:util": "jest test/utils/*"
   },
