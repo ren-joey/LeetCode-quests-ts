@@ -78,7 +78,10 @@ Add script in `package.json`
 ```
 Run command with specific quest number
 ```bash
+# Unix
 NO=<quest_number> npm run test:leetcode
+# Windows & Unix
+npm run test:leetcode --no=<quest_number>
 ```
 
 ## Use Debugger
