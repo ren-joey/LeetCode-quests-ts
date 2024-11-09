@@ -175,3 +175,4 @@ export * from './week11/1235-maximum-profit-in-job-scheduling';
 // ./leetcode/week12/*.ts
 export * from './week12/23-merge-k-sorted-lists';
 export * from './week12/84-largest-rectangle-in-histogram';
+export * from './week12/124-binary-tree-maximum-path-sum';
