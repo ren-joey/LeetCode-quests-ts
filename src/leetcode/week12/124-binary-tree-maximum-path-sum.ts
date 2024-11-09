@@ -1,5 +1,5 @@
 /**
- * FIXME:
+ * TODO:
  * 124. Binary Tree Maximum Path Sum
  * Algorithm: DFS
  * https://leetcode.com/problems/binary-tree-maximum-path-sum/
@@ -40,5 +40,20 @@ import { TreeNode } from "../classes/tree-node";
  */
 
 export const maxPathSum = (root: TreeNode | null): number => {
-    return root ? root.val : 0;
+    let maxSum = -Infinity;
+
+    const dfs = (node: TreeNode | null): number => {
+        if (!node) return 0;
+
+        const left = Math.max(0, dfs(node.left));
+        const right = Math.max(0, dfs(node.right));
+
+        maxSum = Math.max(maxSum, left + right + node.val);
+
+        return Math.max(left, right) + node.val;
+    };
+
+    dfs(root);
+
+    return maxSum;
 };
