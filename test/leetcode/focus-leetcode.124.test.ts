@@ -7,8 +7,8 @@ import {
 describe(`84. Largest Rectangle in Histogram`, () => {
     const cases: [number[], number][] = [
         [[2, 3, 5, 6, 2, 3], 12],
-        // [[2, 1, 5, 6, 2, 3], 10],
-        // [[2, 4], 4]
+        [[2, 1, 5, 6, 2, 3], 10],
+        [[2, 4], 4]
     ];
 
     cases.forEach((c, idx) => {
