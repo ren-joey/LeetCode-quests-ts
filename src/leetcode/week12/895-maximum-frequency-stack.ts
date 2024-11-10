@@ -1,5 +1,5 @@
 /**
- * FIXME:
+ * TODO:
  * 895. Maximum Frequency Stack
  * Algorithm: Hash Table
  * https://leetcode.com/problems/maximum-frequency-stack/
@@ -34,19 +34,43 @@
  *      0 <= val <= 109
  *      At most 2 * 104 calls will be made to push and pop.
  *      It is guaranteed that there will be at least one element in the stack before calling pop.
+ *
+ * References:
+ *      https://leetcode.com/problems/maximum-frequency-stack/solutions/163410/c-java-python-o-1/
  */
 
 export class FreqStack {
-    constructor() {
+    private freq: { [key: number]: number };
+    private group: { [key: number]: number[] };
+    private maxFreq: number;
 
+    constructor() {
+        this.freq = {};
+        this.group = {};
+        this.maxFreq = 0;
     }
 
     push(val: number): void {
-        console.log(val);
+        const f = (this.freq[val] || 0) + 1;
+        this.freq[val] = f;
+        if (f > this.maxFreq) {
+            this.maxFreq = f;
+        }
+        if (!this.group[f]) {
+            this.group[f] = [];
+        }
+        this.group[f].push(val);
     }
 
     pop(): number {
-        return 0;
+        const vals = this.group[this.maxFreq];
+        const val = vals.pop()!;
+        if (vals.length === 0) {
+            delete this.group[this.maxFreq];
+            this.maxFreq--;
+        }
+        this.freq[val]--;
+        return val;
     }
 }
 
