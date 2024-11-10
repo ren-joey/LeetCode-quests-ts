@@ -152,3 +152,13 @@
 |Week10|Medium|362. Design Hit Counter|Design|[Link](week10/362-design-hit-counter.ts)|
 |Week10|Hard|1197. Minimum Knight Moves|Graph, Breadth-First Search|[Link](week10/1197-minimum-knight-moves.ts)|
 |Week11|Hard|76. Minimum Window Substring|Hash Table, String|[Link](week11/76-minimum-window-substring.ts)|
+|Week11|Hard|42. Trapping Rain Water|Array, Two Pointers, Stack|[Link](week11/42-trapping-rain-water.ts)|
+|Week11|Hard|127. Word Ladder|Breadth-First Search|[Link](week11/127-word-ladder.ts)|
+|Week11|Hard|224. Basic Calculator|Stack, Math|[Link](week11/224-basic-calculator.ts)|
+|Week11|Hard|295. Find Median from Data Stream|Heap, Design|[Link](week11/295-find-median-from-data-stream.ts)|
+|Week11|Hard|297. Serialize and Deserialize Binary Tree|Tree, Design|[Link](week11/297-serialize-and-deserialize-binary-tree.ts)|
+|Week11|Hard|1235. Maximum Profit in Job Scheduling|Dynamic Programming|[Link](week11/1235-maximum-profit-in-job-scheduling.ts)|
+|Week12|Hard|23. Merge k Sorted Lists|Linked List, Divide and Conquer|[Link](src/leetcode/week12/23-merge-k-sorted-lists.ts)|
+|Week12|Hard|84. Largest Rectangle in Histogram|Stack, Array|[Link](src/leetcode/week12/84-largest-rectangle-in-histogram.ts)|
+|Week12|Hard|124. Binary Tree Maximum Path Sum|Tree, Depth-First Search|[Link](src/leetcode/week12/124-binary-tree-maximum-path-sum.ts)|
+|Week12|Hard|895. Maximum Frequency Stack|Hash Table, Stack|[Link](src/leetcode/week12/895-maximum-frequency-stack.ts)|
