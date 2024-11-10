@@ -177,3 +177,4 @@ export * from './week12/23-merge-k-sorted-lists';
 export * from './week12/84-largest-rectangle-in-histogram';
 export * from './week12/124-binary-tree-maximum-path-sum';
 export * from './week12/895-maximum-frequency-stack';
+export * from './week12/4-median-of-two-sorted-arrays';
